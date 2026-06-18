@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অ্যাকটিভ পাওয়ার | Active Power — মেহেরপুর</title>
+<meta name="description" content="অ্যাকটিভ পাওয়ার — মেহেরপুর বড় বাজারে গ্যাস চুলা, ইন্ডাকশন, ওভেন, রাইস কুকার, ফ্যান ও সকল প্রকার ডিজিটাল স্কেল মেরামতের বিশ্বস্ত প্রতিষ্ঠান।">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-950:#0d1b2e;
+    --navy-900:#13294b;
+    --navy-800:#1c3a66;
+    --copper-500:#c8743a;
+    --copper-400:#e2935c;
+    --amber-300:#f0b860;
+    --cream-50:#faf6ef;
+    --cream-100:#f1ead9;
+    --ink-900:#15171c;
+    --wire-green:#3f7d5c;
+    --line:rgba(13,27,46,0.12);
+    --max-w:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream-50);
+    color:var(--ink-900);
+    font-family:'Hind Siliguri','Space Grotesk',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .lang-en{font-family:'Space Grotesk','Hind Siliguri',sans-serif;}
+
+  h1,h2,h3{font-weight:700; margin:0;}
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 24px;}
+
+  /* ===== Lang toggle ===== */
+  [data-lang]{display:none !important;}
+  html[data-active="bn"] [data-lang="bn"]{display:inline-block !important;}
+  html[data-active="en"] [data-lang="en"]{display:inline-block !important;}
+  small[data-lang]{display:none !important;}
+  html[data-active="bn"] small[data-lang="bn"]{display:block !important;}
+  html[data-active="en"] small[data-lang="en"]{display:block !important;}
+
+  /* ===== Topbar ===== */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:var(--navy-950);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .topbar-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+    max-width:var(--max-w); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:38px; height:38px;
+    border-radius:9px;
+    background:linear-gradient(135deg,var(--copper-500),var(--amber-300));
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:20px; height:20px;}
+  .brand-name{color:var(--cream-50); font-weight:700; font-size:1.05rem; line-height:1.1;}
+  .brand-name small{display:block; color:var(--copper-400); font-size:0.68rem; font-weight:500; letter-spacing:0.08em; margin-top:2px; font-family:'Space Grotesk',sans-serif;}
+
+  .top-actions{display:flex; align-items:center; gap:10px;}
+  .lang-switch{
+    display:flex; background:rgba(255,255,255,0.07);
+    border-radius:20px; padding:3px; gap:2px;
+    border:1px solid rgba(255,255,255,0.12);
+  }
+  .lang-switch button{
+    border:none; background:transparent; color:rgba(255,255,255,0.55);
+    padding:6px 13px; border-radius:18px; font-size:0.78rem; font-weight:600;
+    cursor:pointer; font-family:'Space Grotesk',sans-serif; letter-spacing:0.02em;
+    transition:all 0.25s;
+  }
+  .lang-switch button.active{background:var(--copper-500); color:#fff;}
+  .call-pill{
+    display:flex; align-items:center; gap:7px;
+    background:var(--copper-500); color:#fff;
+    padding:8px 16px; border-radius:20px;
+    font-size:0.82rem; font-weight:600;
+    box-shadow:0 2px 10px rgba(200,116,58,0.35);
+  }
+  .call-pill svg{width:14px; height:14px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    background:var(--navy-950);
+    padding:64px 0 0;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 600px 400px at 85% 20%, rgba(200,116,58,0.18), transparent),
+      radial-gradient(ellipse 500px 500px at -5% 80%, rgba(63,125,92,0.12), transparent);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:1.15fr 1fr; gap:40px;
+    align-items:center;
+    padding-bottom:50px;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--amber-300); font-size:0.78rem; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase;
+    margin-bottom:18px; font-family:'Space Grotesk',sans-serif;
+  }
+  .eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--wire-green); box-shadow:0 0 0 3px rgba(63,125,92,0.25); animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+
+  .hero h1{
+    color:var(--cream-50);
+    font-size:clamp(2.1rem, 4.2vw, 3.4rem);
+    line-height:1.18;
+    margin-bottom:18px;
+  }
+  .hero h1 .accent{color:var(--copper-400);}
+  .hero-sub{
+    color:rgba(250,246,239,0.72);
+    font-size:1.05rem; line-height:1.7;
+    max-width:480px; margin-bottom:30px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:13px 26px; border-radius:10px;
+    font-weight:600; font-size:0.95rem;
+    cursor:pointer; border:none;
+    transition:transform 0.2s, box-shadow 0.2s;
+    font-family:inherit;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--copper-500); color:#fff; box-shadow:0 8px 24px rgba(200,116,58,0.32);}
+  .btn-primary:hover{box-shadow:0 12px 28px rgba(200,116,58,0.42);}
+  .btn-ghost{background:rgba(255,255,255,0.06); color:var(--cream-50); border:1px solid rgba(255,255,255,0.18);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.1);}
+  .btn svg{width:16px; height:16px;}
+
+  .hero-stats{display:flex; gap:28px; flex-wrap:wrap;}
+  .hstat{border-left:2px solid var(--copper-500); padding-left:12px;}
+  .hstat b{display:block; color:var(--cream-50); font-size:1.5rem; font-family:'Space Grotesk',sans-serif;}
+  .hstat span{color:rgba(250,246,239,0.55); font-size:0.78rem;}
+
+  /* Hero visual: circuit board card mosaic */
+  .hero-visual{position:relative; z-index:2; height:420px;}
+  .circuit-svg{position:absolute; inset:0; width:100%; height:100%;}
+  .device-card{
+    position:absolute; background:var(--cream-50);
+    border-radius:14px; padding:14px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+    width:118px;
+  }
+  .device-card .ic{font-size:2rem;}
+  .device-card span{font-size:0.7rem; font-weight:600; color:var(--navy-900); text-align:center; font-family:'Hind Siliguri',sans-serif;}
+  .dc1{top:0; left:8%; animation:float1 6s ease-in-out infinite;}
+  .dc2{top:38%; left:38%; animation:float2 7s ease-in-out infinite; z-index:3;}
+  .dc3{bottom:6%; left:4%; animation:float1 6.5s ease-in-out infinite reverse;}
+  .dc4{top:8%; right:2%; animation:float2 5.5s ease-in-out infinite;}
+  .dc5{bottom:0; right:14%; animation:float1 7.5s ease-in-out infinite;}
+  @keyframes float1{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+  @keyframes float2{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
+
+  @media(prefers-reduced-motion:reduce){
+    .device-card, .eyebrow .dot{animation:none !important;}
+  }
+
+  /* ===== Section shared ===== */
+  section{padding:80px 0;}
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-tag{
+    display:inline-block; color:var(--copper-500); font-weight:700;
+    font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase;
+    margin-bottom:12px; font-family:'Space Grotesk',sans-serif;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem); color:var(--navy-950); line-height:1.25;}
+  .section-head p{color:#5a5f6b; margin-top:14px; font-size:1.02rem; line-height:1.7;}
+
+  /* ===== Services ===== */
+  .services{background:var(--cream-50);}
+  .svc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+  .svc-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:28px 24px; position:relative; overflow:hidden;
+    transition:border-color 0.25s, transform 0.25s;
+  }
+  .svc-card:hover{transform:translateY(-4px); border-color:var(--copper-400);}
+  .svc-card::after{
+    content:''; position:absolute; top:0; right:0; width:70px; height:70px;
+    background:radial-gradient(circle, rgba(200,116,58,0.1), transparent 70%);
+  }
+  .svc-num{
+    font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--copper-500);
+    font-weight:500; margin-bottom:14px; display:block;
+  }
+  .svc-ic{
+    width:46px; height:46px; border-radius:11px;
+    background:var(--navy-950); display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px; font-size:1.4rem;
+  }
+  .svc-card h3{font-size:1.08rem; color:var(--navy-950); margin-bottom:8px;}
+  .svc-card p{font-size:0.88rem; color:#666; line-height:1.6;}
+
+  /* ===== Note strip ===== */
+  .note-strip{
+    background:var(--wire-green); color:#fff;
+    padding:18px 0;
+  }
+  .note-strip .wrap{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  .note-strip svg{width:20px; height:20px; flex-shrink:0;}
+  .note-strip p{font-size:0.92rem; font-weight:500;}
+
+  /* ===== Why us / signature circuit line ===== */
+  .why{background:var(--navy-950); position:relative; overflow:hidden;}
+  .why::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(ellipse 700px 400px at 50% 0%, rgba(200,116,58,0.1), transparent);
+  }
+  .why .section-head h2,.why .section-tag{color:var(--cream-50);}
+  .why .section-tag{color:var(--amber-300);}
+  .why .section-head p{color:rgba(250,246,239,0.65);}
+
+  .circuit-path-wrap{position:relative; z-index:2;}
+  .feature-row{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:0; position:relative;
+  }
+  .feature-row::before{
+    content:''; position:absolute; top:26px; left:0; right:0; height:2px;
+    background:repeating-linear-gradient(90deg, var(--copper-500) 0 10px, transparent 10px 18px);
+  }
+  .feature{position:relative; padding:0 18px; text-align:center;}
+  .feature-node{
+    width:54px; height:54px; border-radius:50%;
+    background:var(--navy-900); border:2px solid var(--copper-500);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 18px; font-size:1.4rem;
+    position:relative; z-index:2;
+  }
+  .feature h3{color:var(--cream-50); font-size:1.02rem; margin-bottom:8px;}
+  .feature p{color:rgba(250,246,239,0.6); font-size:0.85rem; line-height:1.6;}
+
+  /* ===== Contact ===== */
+  .contact{background:var(--cream-100);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;}
+  .info-list{display:flex; flex-direction:column; gap:18px; margin-top:28px;}
+  .info-item{display:flex; gap:14px; align-items:flex-start;}
+  .info-ic{
+    width:42px; height:42px; border-radius:10px; background:var(--navy-950);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .info-ic svg{width:18px; height:18px; stroke:var(--amber-300);}
+  .info-item b{display:block; color:var(--navy-950); font-size:0.95rem; margin-bottom:3px;}
+  .info-item span, .info-item a{color:#555; font-size:0.92rem; line-height:1.55;}
+  .info-item a:hover{color:var(--copper-500);}
+
+  .map-frame{
+    margin-top:24px; border-radius:14px; overflow:hidden;
+    border:1px solid var(--line); height:220px;
+  }
+  .map-frame iframe{width:100%; height:100%; border:0;}
+
+  /* form */
+  .form-card{
+    background:#fff; border-radius:18px; padding:32px;
+    box-shadow:0 20px 50px rgba(13,27,46,0.1);
+    border:1px solid var(--line);
+  }
+  .form-card h3{color:var(--navy-950); font-size:1.25rem; margin-bottom:6px;}
+  .form-card>p{color:#666; font-size:0.88rem; margin-bottom:24px;}
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:0.85rem; font-weight:600; color:var(--navy-900); margin-bottom:7px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 14px; border-radius:9px;
+    border:1.5px solid var(--line); font-size:0.92rem;
+    font-family:inherit; background:var(--cream-50);
+    transition:border-color 0.2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--copper-500);
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .submit-btn{
+    width:100%; background:var(--copper-500); color:#fff;
+    padding:14px; border-radius:10px; border:none;
+    font-weight:700; font-size:0.96rem; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    transition:background 0.2s;
+    font-family:inherit;
+  }
+  .submit-btn:hover{background:#b3652f;}
+  .submit-btn svg{width:17px; height:17px;}
+  .form-note{font-size:0.78rem; color:#888; margin-top:12px; text-align:center;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-950); padding:36px 0 24px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-inner p{color:rgba(250,246,239,0.5); font-size:0.82rem;}
+  .footer-brand{display:flex; align-items:center; gap:9px; color:var(--cream-50); font-weight:700; font-size:0.95rem;}
+
+  /* ===== Focus visibility ===== */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--amber-300); outline-offset:2px;
+  }
+
+  /* ===== Responsive ===== */
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .hero-visual{height:300px; order:-1;}
+    .device-card{width:92px; padding:10px;}
+    .device-card .ic{font-size:1.5rem;}
+    .device-card span{font-size:0.6rem;}
+    .contact-grid{grid-template-columns:1fr; gap:36px;}
+    .feature-row{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .feature-row::before{display:none;}
+    section{padding:56px 0;}
+    .topbar-inner{padding:12px 16px;}
+    .wrap{padding:0 16px;}
+    .call-pill span{display:none;}
+  }
+  @media(max-width:520px){
+    .hero{padding-top:40px;}
+    .hero-ctas .btn{flex:1; justify-content:center;}
+    .feature-row{grid-template-columns:1fr;}
+    .brand-name{font-size:0.92rem;}
+    .brand-name small{font-size:0.6rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="brand-name">
+        <span data-lang="bn">অ্যাকটিভ পাওয়ার</span>
+        <span data-lang="en">Active Power</span>
+        <small data-lang="bn">বড় বাজার, মেহেরপুর</small>
+        <small data-lang="en">Boro Bazar, Meherpur</small>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button id="btn-bn" class="active" onclick="setLang('bn')">বাং</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a class="call-pill" href="tel:01717807066">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-lang="bn">কল করুন</span>
+        <span data-lang="en">Call now</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="bn">এখনই খোলা · বড় বাজার, থানা রোড</span>
+        <span data-lang="en">Open now · Boro Bazar, Thana Road</span>
+      </div>
+      <h1>
+        <span data-lang="bn">আপনার যন্ত্র অচল?<br>আমরা একে <span class="accent">আবার সচল</span> করি।</span>
+        <span data-lang="en">Your appliance stopped?<br>We bring it <span class="accent">back to life</span>.</span>
+      </h1>
+      <p class="hero-sub">
+        <span data-lang="bn">গ্যাস ও ইন্ডাকশন চুলা, ওভেন, রাইস কুকার, ফ্যান, চার্জার লাইট, আয়রন থেকে সকল প্রকার ডিজিটাল স্কেল — মেহেরপুরের সবচেয়ে অভিজ্ঞ টেকনিশিয়ান দ্বারা মেরামত হয় এখানে।</span>
+        <span data-lang="en">From gas & induction stoves, ovens, rice cookers, fans and irons to every type of digital scale — repaired here by Meherpur's most experienced technicians.</span>
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:01717807066">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-lang="bn">০১৭১৭-৮০৭০৬৬</span>
+          <span data-lang="en">01717-807066</span>
+        </a>
+        <a class="btn btn-ghost" href="#contact">
+          <span data-lang="bn">সমস্যা জানান</span>
+          <span data-lang="en">Describe your issue</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b><span data-lang="bn">৬+ বছর</span><span data-lang="en">6+ yrs</span></b><span data-lang="bn">কারিগরি অভিজ্ঞতা</span><span data-lang="en">years of repair experience</span></div>
+        <div class="hstat"><b><span data-lang="bn">৭</span><span data-lang="en">7</span></b><span data-lang="bn">ধরনের যন্ত্র সার্ভিস</span><span data-lang="en">appliance categories serviced</span></div>
+        <div class="hstat"><b><span data-lang="bn">২</span><span data-lang="en">2</span></b><span data-lang="bn">সরাসরি কল লাইন</span><span data-lang="en">direct call lines</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="circuit-svg" viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#c8743a" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="2 6">
+          <path d="M60 70 L60 200 L160 200"/>
+          <path d="M340 60 L340 180 L240 180"/>
+          <path d="M60 330 L60 260 L160 260"/>
+          <path d="M320 340 L320 260 L240 260"/>
+        </g>
+        <circle cx="160" cy="200" r="3" fill="#e2935c"/>
+        <circle cx="240" cy="180" r="3" fill="#e2935c"/>
+        <circle cx="160" cy="260" r="3" fill="#e2935c"/>
+        <circle cx="240" cy="260" r="3" fill="#e2935c"/>
+      </svg>
+      <div class="device-card dc1"><span class="ic">🔥</span><span data-lang="bn">গ্যাস চুলা</span><span data-lang="en">Gas Stove</span></div>
+      <div class="device-card dc2"><span class="ic">⚖️</span><span data-lang="bn">ডিজিটাল স্কেল</span><span data-lang="en">Digital Scale</span></div>
+      <div class="device-card dc3"><span class="ic">🍚</span><span data-lang="bn">রাইস কুকার</span><span data-lang="en">Rice Cooker</span></div>
+      <div class="device-card dc4"><span class="ic">🌀</span><span data-lang="bn">ফ্যান</span><span data-lang="en">Fan</span></div>
+      <div class="device-card dc5"><span class="ic">⚡</span><span data-lang="bn">ইন্ডাকশন চুলা</span><span data-lang="en">Induction</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOTE STRIP ===== -->
+<div class="note-strip">
+  <div class="wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <p>
+      <span data-lang="bn">বিঃদ্রঃ এখানে সকল প্রকার ডিজিটাল স্কেল মেরামত করা হয়।</span>
+      <span data-lang="en">Note: All types of digital weighing scales are repaired here.</span>
+    </p>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag" data-lang="bn">আমাদের সার্ভিস</span>
+      <span class="section-tag" data-lang="en">Our services</span>
+      <h2>
+        <span data-lang="bn">যা যা মেরামত করি আমরা</span>
+        <span data-lang="en">What we repair</span>
+      </h2>
+      <p>
+        <span data-lang="bn">সুদক্ষ টেকনিশিয়ান দ্বারা প্রতিটি যন্ত্র পরীক্ষা করে সঠিক সমাধান দেওয়া হয়। যন্ত্রের সমস্যা যত জটিলই হোক, আমরা চেষ্টা করি।</span>
+        <span data-lang="en">Every appliance is examined by a skilled technician before the right fix is applied — however tricky the problem may be.</span>
+      </p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-num">01</span>
+        <div class="svc-ic">🔥</div>
+        <h3><span data-lang="bn">গ্যাস ও ইন্ডাকশন চুলা</span><span data-lang="en">Gas & Induction Stove</span></h3>
+        <p><span data-lang="bn">বার্নার, ইগনিশন, নব ও সার্কিট বোর্ড মেরামত।</span><span data-lang="en">Burner, ignition, knob and circuit board repair.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">02</span>
+        <div class="svc-ic">♨️</div>
+        <h3><span data-lang="bn">ওভেন</span><span data-lang="en">Oven</span></h3>
+        <p><span data-lang="bn">হিটিং এলিমেন্ট, থার্মোস্ট্যাট ও বৈদ্যুতিক ত্রুটি সমাধান।</span><span data-lang="en">Heating element, thermostat and electrical fault fixes.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">03</span>
+        <div class="svc-ic">🍚</div>
+        <h3><span data-lang="bn">রাইস কুকার</span><span data-lang="en">Rice Cooker</span></h3>
+        <p><span data-lang="bn">গরম না হওয়া, সুইচ ও কয়েল সমস্যার সমাধান।</span><span data-lang="en">No-heat issues, switch and coil problems solved.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">04</span>
+        <div class="svc-ic">🔋</div>
+        <h3><span data-lang="bn">চার্জার লাইট</span><span data-lang="en">Charger Light</span></h3>
+        <p><span data-lang="bn">ব্যাটারি, চার্জিং সার্কিট ও LED মেরামত।</span><span data-lang="en">Battery, charging circuit and LED repair.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">05</span>
+        <div class="svc-ic">🌀</div>
+        <h3><span data-lang="bn">ফ্যান</span><span data-lang="en">Fan</span></h3>
+        <p><span data-lang="bn">মোটর, ক্যাপাসিটর ও স্পিড রেগুলেটর ঠিক করা।</span><span data-lang="en">Motor, capacitor and speed regulator fixes.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">06</span>
+        <div class="svc-ic">👔</div>
+        <h3><span data-lang="bn">আয়রন</span><span data-lang="en">Iron</span></h3>
+        <p><span data-lang="bn">হিটিং কয়েল ও তাপমাত্রা নিয়ন্ত্রণ মেরামত।</span><span data-lang="en">Heating coil and temperature control repair.</span></p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">07</span>
+        <div class="svc-ic">⚖️</div>
+        <h3><span data-lang="bn">সকল ডিজিটাল স্কেল</span><span data-lang="en">All Digital Scales</span></h3>
+        <p><span data-lang="bn">ক্যালিব্রেশন, ডিসপ্লে ও লোড সেল মেরামত।</span><span data-lang="en">Calibration, display and load cell repair.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why">
+  <div class="wrap circuit-path-wrap">
+    <div class="section-head">
+      <span class="section-tag" data-lang="bn">কেন অ্যাকটিভ পাওয়ার</span>
+      <span class="section-tag" data-lang="en">Why active power</span>
+      <h2>
+        <span data-lang="bn">মেরামতের প্রতিটি ধাপ স্বচ্ছ</span>
+        <span data-lang="en">Every step of the repair, transparent</span>
+      </h2>
+    </div>
+    <div class="feature-row">
+      <div class="feature">
+        <div class="feature-node">🔍</div>
+        <h3><span data-lang="bn">পরীক্ষা</span><span data-lang="en">Diagnose</span></h3>
+        <p><span data-lang="bn">যন্ত্র খুলে আসল সমস্যা খুঁজে বের করি।</span><span data-lang="en">We open the device and find the real fault.</span></p>
+      </div>
+      <div class="feature">
+        <div class="feature-node">💬</div>
+        <h3><span data-lang="bn">জানানো</span><span data-lang="en">Explain</span></h3>
+        <p><span data-lang="bn">কী সমস্যা ও খরচ কত, আগেই বলে দিই।</span><span data-lang="en">We tell you the issue and cost upfront.</span></p>
+      </div>
+      <div class="feature">
+        <div class="feature-node">🛠️</div>
+        <h3><span data-lang="bn">মেরামত</span><span data-lang="en">Repair</span></h3>
+        <p><span data-lang="bn">সুদক্ষ টেকনিশিয়ান দ্বারা সঠিক যন্ত্রাংশে কাজ।</span><span data-lang="en">Skilled technicians fix it with the right parts.</span></p>
+      </div>
+      <div class="feature">
+        <div class="feature-node">✅</div>
+        <h3><span data-lang="bn">নিশ্চিত</span><span data-lang="en">Confirm</span></h3>
+        <p><span data-lang="bn">চালু করে দেখিয়ে তারপর হস্তান্তর করি।</span><span data-lang="en">We test it running before handing it back.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="section-tag" data-lang="bn">যোগাযোগ</span>
+      <span class="section-tag" data-lang="en">Get in touch</span>
+      <h2 style="font-size:clamp(1.6rem,2.6vw,2.1rem); color:var(--navy-950); line-height:1.3;">
+        <span data-lang="bn">দোকানে আসুন বা সরাসরি কল করুন</span>
+        <span data-lang="en">Visit the shop or call us directly</span>
+      </h2>
+
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <b data-lang="bn">ফোন</b><b data-lang="en">Phone</b>
+            <span><a href="tel:01717807066">০১৭১৭-৮০৭০৬৬</a> · <a href="tel:01977807066">০১৯৭৭-৮০৭০৬৬</a></span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <b data-lang="bn">ঠিকানা</b><b data-lang="en">Address</b>
+            <span data-lang="bn">বড় বাজার, থানা রোড, মেহেরপুর</span>
+            <span data-lang="en">Boro Bazar, Thana Road, Meherpur</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <b data-lang="bn">খোলার সময়</b><b data-lang="en">Hours</b>
+            <span data-lang="bn">শনি – বৃহস্পতি, সকাল ৯টা – রাত ৮টা</span>
+            <span data-lang="en">Sat – Thu, 9:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <div>
+            <b data-lang="bn">প্রোপ্রাইটর</b><b data-lang="en">Proprietor</b>
+            <span data-lang="bn">মোঃ রকিবুল ইসলাম মাছুম</span>
+            <span data-lang="en">Md. Rakibul Islam Mashum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Boro+Bazar+Thana+Road+Meherpur&output=embed" title="Active Power location map"></iframe>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3><span data-lang="bn">আপনার সমস্যা জানান</span><span data-lang="en">Tell us your issue</span></h3>
+      <p><span data-lang="bn">ফর্মটি পূরণ করুন — সাবমিট করলে সরাসরি হোয়াটসঅ্যাপে চলে যাবে।</span><span data-lang="en">Fill the form — submitting opens WhatsApp with your message ready to send.</span></p>
+
+      <form id="repair-form" onsubmit="return sendToWhatsApp(event)">
+        <div class="field">
+          <label data-lang="bn">আপনার নাম</label><label data-lang="en">Your name</label>
+          <input type="text" id="f-name" required data-ph-bn="যেমন: করিম উদ্দিন" data-ph-en="e.g. Karim Uddin" placeholder="যেমন: করিম উদ্দিন">
+        </div>
+        <div class="field">
+          <label data-lang="bn">মোবাইল নম্বর</label><label data-lang="en">Mobile number</label>
+          <input type="tel" id="f-phone" required data-ph-bn="01XXXXXXXXX" data-ph-en="01XXXXXXXXX" placeholder="01XXXXXXXXX">
+        </div>
+        <div class="field">
+          <label data-lang="bn">কোন যন্ত্র নিয়ে সমস্যা</label><label data-lang="en">Which appliance</label>
+          <select id="f-device">
+            <option value="bn:গ্যাস/ইন্ডাকশন চুলা|en:Gas/Induction Stove">গ্যাস/ইন্ডাকশন চুলা</option>
+            <option value="bn:ওভেন|en:Oven">ওভেন</option>
+            <option value="bn:রাইস কুকার|en:Rice Cooker">রাইস কুকার</option>
+            <option value="bn:চার্জার লাইট|en:Charger Light">চার্জার লাইট</option>
+            <option value="bn:ফ্যান|en:Fan">ফ্যান</option>
+            <option value="bn:আয়রন|en:Iron">আয়রন</option>
+            <option value="bn:ডিজিটাল স্কেল|en:Digital Scale">ডিজিটাল স্কেল</option>
+            <option value="bn:অন্যান্য|en:Other">অন্যান্য</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-lang="bn">সমস্যার বিবরণ</label><label data-lang="en">Describe the problem</label>
+          <textarea id="f-msg" data-ph-bn="যেমন: চুলা জ্বলছে না, স্কেলে ওজন দেখাচ্ছে না..." data-ph-en="e.g. Stove won't light, scale shows no reading..." placeholder="যেমন: চুলা জ্বলছে না, স্কেলে ওজন দেখাচ্ছে না..."></textarea>
+        </div>
+        <button class="submit-btn" type="submit">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12 4.3a8.93 8.93 0 0 0-7.7 13.46L3 21l3.3-1.27a8.9 8.9 0 0 0 5.7 2.06 8.93 8.93 0 0 0 0-17.86 8.86 8.86 0 0 0 5.6 2.39zm-5.6 13.7a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8 1.08.97-2.66-.18-.28a7.43 7.43 0 1 1 6.06 3.06zm4.07-5.56c-.22-.11-1.3-.64-1.5-.71-.2-.07-.35-.11-.5.11-.15.22-.57.71-.7.86-.13.15-.26.16-.48.05-1.3-.65-2.15-1.16-3.02-2.63-.23-.39.23-.36.66-1.2.07-.15.04-.27-.02-.38-.07-.11-.6-1.45-.82-1.93-.22-.48-.45-.42-.62-.42-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.96.94-.96 2.28 0 1.34.98 2.64 1.11 2.82.13.18 1.83 2.8 4.44 3.81 2.21.84 2.66.68 3.14.64.48-.04 1.55-.63 1.77-1.24.22-.6.22-1.12.15-1.23-.07-.11-.25-.18-.47-.29z"/></svg>
+          <span data-lang="bn">হোয়াটসঅ্যাপে পাঠান</span>
+          <span data-lang="en">Send via WhatsApp</span>
+        </button>
+        <p class="form-note">
+          <span data-lang="bn">অথবা সরাসরি কল করুন: ০১৭১৭-৮০৭০৬৬</span>
+          <span data-lang="en">Or simply call us: 01717-807066</span>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e2935c" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <span data-lang="bn">অ্যাকটিভ পাওয়ার</span>
+      <span data-lang="en">Active Power</span>
+    </div>
+    <p>
+      <span data-lang="bn">© ২০২৬ অ্যাকটিভ পাওয়ার, বড় বাজার, মেহেরপুর। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span data-lang="en">© 2026 Active Power, Boro Bazar, Meherpur. All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  function updateDeviceOptions(lang){
+    var sel = document.getElementById('f-device');
+    if(!sel) return;
+    Array.from(sel.options).forEach(function(opt){
+      var parts = opt.value.split('|').reduce(function(acc,p){
+        var idx = p.indexOf(':');
+        acc[p.slice(0,idx)] = p.slice(idx+1);
+        return acc;
+      }, {});
+      opt.textContent = parts[lang] || parts.bn;
+    });
+  }
+
+  function updatePlaceholders(lang){
+    document.querySelectorAll('[data-ph-bn]').forEach(function(el){
+      var ph = lang === 'en' ? el.getAttribute('data-ph-en') : el.getAttribute('data-ph-bn');
+      el.setAttribute('placeholder', ph);
+    });
+  }
+
+  function setLang(lang){
+    document.documentElement.setAttribute('data-active', lang);
+    document.getElementById('btn-bn').classList.toggle('active', lang==='bn');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    document.documentElement.setAttribute('lang', lang==='bn' ? 'bn' : 'en');
+    updateDeviceOptions(lang);
+    updatePlaceholders(lang);
+    try{ localStorage.setItem('ap-lang', lang); }catch(e){}
+  }
+  (function(){
+    var saved = 'bn';
+    try{ saved = localStorage.getItem('ap-lang') || 'bn'; }catch(e){}
+    setLang(saved);
+  })();
+
+  function sendToWhatsApp(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var deviceRaw = document.getElementById('f-device').value;
+    var isEn = document.documentElement.getAttribute('data-active') === 'en';
+    var deviceParts = deviceRaw.split('|').reduce(function(acc,p){
+      var idx = p.indexOf(':');
+      acc[p.slice(0,idx)] = p.slice(idx+1);
+      return acc;
+    }, {});
+    var device = isEn ? deviceParts.en : deviceParts.bn;
+    var msg = document.getElementById('f-msg').value.trim();
+
+    var text;
+    if(isEn){
+      text = "Hello Active Power,\nName: " + name + "\nPhone: " + phone + "\nAppliance: " + device + (msg ? ("\nProblem: " + msg) : "");
+    } else {
+      text = "আসসালামু আলাইকুম অ্যাকটিভ পাওয়ার,\nনাম: " + name + "\nফোন: " + phone + "\nযন্ত্র: " + device + (msg ? ("\nসমস্যা: " + msg) : "");
+    }
+    var waNumber = "8801717807066";
+    var url = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+    return false;
+  }
+</script>
+
+</body>
+</html>
